@@ -1,0 +1,57 @@
+2022-03-30T04:56:30.297325Z     debug   envoy filter    original_dst: new connection accepted
+2022-03-30T04:56:30.297374Z     debug   envoy filter    tls inspector: new connection accepted
+2022-03-30T04:56:30.300230Z     debug   envoy conn_handler      [C913] new connection from 10.128.0.91:26755
+2022-03-30T04:56:30.300334Z     debug   envoy http      [C913] new stream
+2022-03-30T04:56:30.300424Z     debug   envoy http      [C913][S10619285011758396059] request headers complete (end_stream=true):
+':authority', '35.193.220.12'
+':path', '/pets'
+':method', 'GET'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+
+2022-03-30T04:56:30.300440Z     debug   envoy http      [C913][S10619285011758396059] request end stream
+2022-03-30T04:56:30.301150Z     debug   envoy router    [C913][S10619285011758396059] cluster 'inbound|8080||' match for URL '/pets'
+2022-03-30T04:56:30.301251Z     debug   envoy upstream  transport socket match, socket default selected for host with address 10.92.1.22:8080
+2022-03-30T04:56:30.301328Z     debug   envoy upstream  Created host 10.92.1.22:8080.
+2022-03-30T04:56:30.301439Z     debug   envoy router    [C913][S10619285011758396059] router decoding headers:
+':authority', '35.193.220.12'
+':path', '/pets'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'a416ecc1-9586-419c-8bf5-fc9da6d7fe00'
+'x-b3-traceid', 'b0ce0c506dab833a37b268d64fea030b'
+'x-b3-spanid', '37b268d64fea030b'
+'x-b3-sampled', '0'
+
+2022-03-30T04:56:30.301497Z     debug   envoy pool      queueing stream due to no available connections
+2022-03-30T04:56:30.301511Z     debug   envoy pool      trying to create new connection
+2022-03-30T04:56:30.301515Z     debug   envoy pool      creating a new connection
+2022-03-30T04:56:30.301628Z     debug   envoy client    [C914] connecting
+2022-03-30T04:56:30.301642Z     debug   envoy connection        [C914] connecting to 10.92.1.22:8080
+2022-03-30T04:56:30.301816Z     debug   envoy connection        [C914] connection in progress
+2022-03-30T04:56:30.301901Z     debug   envoy connection        [C914] connected
+2022-03-30T04:56:30.302057Z     debug   envoy client    [C914] connected
+2022-03-30T04:56:30.302123Z     debug   envoy pool      [C914] attaching to next stream
+2022-03-30T04:56:30.302140Z     debug   envoy pool      [C914] creating stream
+2022-03-30T04:56:30.302154Z     debug   envoy router    [C913][S10619285011758396059] pool ready
+2022-03-30T04:56:30.303233Z     debug   envoy upstream  addHost() adding 10.92.1.22:8080
+2022-03-30T04:56:30.303297Z     debug   envoy upstream  membership update for TLS cluster inbound|8080|| added 1 removed 0
+2022-03-30T04:56:30.303303Z     debug   envoy upstream  re-creating local LB for TLS cluster inbound|8080||
+2022-03-30T04:56:30.303308Z     debug   envoy upstream  membership update for TLS cluster inbound|8080|| added 1 removed 0
+2022-03-30T04:56:30.303316Z     debug   envoy upstream  re-creating local LB for TLS cluster inbound|8080||
+2022-03-30T04:56:30.303352Z     debug   envoy upstream  membership update for TLS cluster inbound|8080|| added 1 removed 0
+2022-03-30T04:56:30.303358Z     debug   envoy upstream  re-creating local LB for TLS cluster inbound|8080||
+2022-03-30T04:56:30.308267Z     debug   envoy router    [C913][S10619285011758396059] upstream headers complete: end_stream=false
+2022-03-30T04:56:30.308366Z     debug   envoy http      [C913][S10619285011758396059] encoding headers via codec (end_stream=false):
+':status', '200'
+'content-type', 'text/xml'
+'date', 'Wed, 30 Mar 2022 04:56:30 GMT'
+'content-length', '86'
+'x-envoy-upstream-service-time', '6'
+'server', 'istio-envoy'
+'x-envoy-decorator-operation', 'gateway-proxy.gloo-system.svc.cluster.local:80/*'
+
+2022-03-30T04:56:30.308407Z     debug   envoy client    [C914] response complete

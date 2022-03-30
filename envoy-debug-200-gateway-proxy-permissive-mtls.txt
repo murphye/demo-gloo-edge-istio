@@ -1,0 +1,46 @@
+[2022-03-30 04:59:29.010][18][debug][conn_handler] [external/envoy/source/server/active_tcp_listener.cc:140] [C17] new connection from 127.0.0.6:47317
+[2022-03-30 04:59:29.010][18][debug][http] [external/envoy/source/common/http/conn_manager_impl.cc:274] [C17] new stream
+[2022-03-30 04:59:29.010][18][debug][http] [external/envoy/source/common/http/conn_manager_impl.cc:867] [C17][S7409097409187938469] request headers complete (end_stream=true):
+':authority', '35.193.220.12'
+':path', '/pets'
+':method', 'GET'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '89392d1b-5c81-4a26-89ee-02388c3e7db8'
+'x-b3-traceid', '50e8e0a76d2ffd394a6a28a90b289977'
+'x-b3-spanid', '4a6a28a90b289977'
+'x-b3-sampled', '0'
+
+[2022-03-30 04:59:29.010][18][debug][http] [external/envoy/source/common/http/filter_manager.cc:841] [C17][S7409097409187938469] request end stream
+[2022-03-30 04:59:29.010][18][debug][router] [external/envoy/source/common/router/router.cc:457] [C17][S7409097409187938469] cluster 'petstore-petstore-8080_gloo-system' match for URL '/pets'
+[2022-03-30 04:59:29.010][18][debug][router] [external/envoy/source/common/router/router.cc:673] [C17][S7409097409187938469] router decoding headers:
+':authority', '35.193.220.12'
+':path', '/api/pets'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '89392d1b-5c81-4a26-89ee-02388c3e7db8'
+'x-b3-traceid', '50e8e0a76d2ffd394a6a28a90b289977'
+'x-b3-spanid', '4a6a28a90b289977'
+'x-b3-sampled', '0'
+'x-envoy-expected-rq-timeout-ms', '15000'
+'x-envoy-original-path', '/pets'
+
+[2022-03-30 04:59:29.010][18][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:240] [C14] using existing connection
+[2022-03-30 04:59:29.010][18][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:177] [C14] creating stream
+[2022-03-30 04:59:29.010][18][debug][router] [external/envoy/source/common/router/upstream_request.cc:416] [C17][S7409097409187938469] pool ready
+[2022-03-30 04:59:29.014][18][debug][router] [external/envoy/source/common/router/router.cc:1285] [C17][S7409097409187938469] upstream headers complete: end_stream=false
+[2022-03-30 04:59:29.014][18][debug][http] [external/envoy/source/common/http/conn_manager_impl.cc:1467] [C17][S7409097409187938469] encoding headers via codec (end_stream=false):
+':status', '200'
+'content-type', 'text/xml'
+'date', 'Wed, 30 Mar 2022 04:59:29 GMT'
+'content-length', '86'
+'x-envoy-upstream-service-time', '3'
+'server', 'envoy'
+'x-envoy-decorator-operation', 'petstore.petstore.svc.cluster.local:8080/*'
+
+[2022-03-30 04:59:29.018][18][debug][client] [external/envoy/source/common/http/codec_client.cc:129] [C14] response complete
+[2022-03-30 04:59:29.018][18][debug][pool] [external/envoy/source/common/http/http1/conn_pool.cc:53] [C14] response complete

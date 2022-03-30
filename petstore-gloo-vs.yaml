@@ -1,0 +1,28 @@
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  name: default
+  namespace: gloo-system
+spec:
+  displayName: default
+  virtualHost:
+    domains:
+    - '*'
+    routes:
+      - matchers:
+        # curl -i $(glooctl proxy url)/pets
+        - methods:
+          - GET
+          prefix: /pets
+        options:
+          prefixRewrite: /api/pets
+        routeAction:
+          single:
+            upstream:
+              name: petstore-petstore-8080
+              namespace: gloo-system
+            # kube:
+            #   ref:
+            #     name: petstore
+            #     namespace: petstore
+            #   port: 8080

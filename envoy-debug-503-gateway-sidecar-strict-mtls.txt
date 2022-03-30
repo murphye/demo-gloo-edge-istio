@@ -1,0 +1,80 @@
+2022-03-30T04:28:33.098658Z     debug   envoy router    [C43][S5034267717411693636] cluster 'inbound|8080||' match for URL '/pets'
+2022-03-30T04:28:33.098684Z     debug   envoy upstream  transport socket match, socket default selected for host with address 10.92.1.22:8080
+2022-03-30T04:28:33.098690Z     debug   envoy upstream  Created host 10.92.1.22:8080.
+2022-03-30T04:28:33.098745Z     debug   envoy upstream  addHost() adding 10.92.1.22:8080
+2022-03-30T04:28:33.098752Z     debug   envoy router    [C43][S5034267717411693636] router decoding headers:
+':authority', '35.193.220.12'
+':path', '/pets'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '806a7892-f66f-4d6a-be89-aa1454833c84'
+'x-b3-traceid', '91c80c68907c4fcdab191fecd04f89f7'
+'x-b3-spanid', 'ab191fecd04f89f7'
+'x-b3-sampled', '0'
+
+2022-03-30T04:28:33.098766Z     debug   envoy pool      queueing stream due to no available connections
+2022-03-30T04:28:33.098771Z     debug   envoy pool      trying to create new connection
+2022-03-30T04:28:33.098774Z     debug   envoy pool      creating a new connection
+2022-03-30T04:28:33.098801Z     debug   envoy upstream  membership update for TLS cluster inbound|8080|| added 1 removed 0
+2022-03-30T04:28:33.098809Z     debug   envoy upstream  re-creating local LB for TLS cluster inbound|8080||
+2022-03-30T04:28:33.098831Z     debug   envoy upstream  membership update for TLS cluster inbound|8080|| added 1 removed 0
+2022-03-30T04:28:33.098837Z     debug   envoy upstream  re-creating local LB for TLS cluster inbound|8080||
+2022-03-30T04:28:33.098898Z     debug   envoy client    [C44] connecting
+2022-03-30T04:28:33.098904Z     debug   envoy connection        [C44] connecting to 10.92.1.22:8080
+2022-03-30T04:28:33.098984Z     debug   envoy connection        [C44] connection in progress
+2022-03-30T04:28:33.099009Z     debug   envoy upstream  membership update for TLS cluster inbound|8080|| added 1 removed 0
+2022-03-30T04:28:33.099017Z     debug   envoy upstream  re-creating local LB for TLS cluster inbound|8080||
+2022-03-30T04:28:33.099035Z     debug   envoy connection        [C44] connected
+2022-03-30T04:28:33.099124Z     debug   envoy client    [C44] connected
+2022-03-30T04:28:33.099136Z     debug   envoy pool      [C44] attaching to next stream
+2022-03-30T04:28:33.099141Z     debug   envoy pool      [C44] creating stream
+2022-03-30T04:28:33.099152Z     debug   envoy router    [C43][S5034267717411693636] pool ready
+2022-03-30T04:28:33.100955Z     debug   envoy filter    original_dst: new connection accepted
+2022-03-30T04:28:33.102486Z     debug   envoy filter    [C45] new tcp proxy session
+2022-03-30T04:28:33.103569Z     debug   envoy filter    [C45] Creating connection to cluster PassthroughCluster
+2022-03-30T04:28:33.104150Z     debug   envoy upstream  transport socket match, socket default selected for host with address 10.92.2.20:8080
+2022-03-30T04:28:33.104241Z     debug   envoy upstream  Created host 10.92.2.20:8080.
+2022-03-30T04:28:33.104701Z     debug   envoy pool      trying to create new connection
+2022-03-30T04:28:33.105395Z     debug   envoy pool      creating a new connection
+2022-03-30T04:28:33.105199Z     debug   envoy upstream  addHost() adding 10.92.2.20:8080
+2022-03-30T04:28:33.105895Z     debug   envoy upstream  membership update for TLS cluster PassthroughCluster added 1 removed 0
+2022-03-30T04:28:33.105953Z     debug   envoy upstream  re-creating local LB for TLS cluster PassthroughCluster
+2022-03-30T04:28:33.105987Z     debug   envoy upstream  membership update for TLS cluster PassthroughCluster added 1 removed 0
+2022-03-30T04:28:33.106357Z     debug   envoy upstream  re-creating local LB for TLS cluster PassthroughCluster
+2022-03-30T04:28:33.106485Z     debug   envoy connection        [C46] connecting to 10.92.2.20:8080
+2022-03-30T04:28:33.106649Z     debug   envoy connection        [C46] connection in progress
+2022-03-30T04:28:33.106750Z     debug   envoy conn_handler      [C45] new connection from 10.92.1.22:39722
+2022-03-30T04:28:33.106924Z     debug   envoy upstream  membership update for TLS cluster PassthroughCluster added 1 removed 0
+2022-03-30T04:28:33.106970Z     debug   envoy upstream  re-creating local LB for TLS cluster PassthroughCluster
+2022-03-30T04:28:33.108718Z     debug   envoy connection        [C46] connected
+2022-03-30T04:28:33.109003Z     debug   envoy connection        [C46] connected on local interface 'eth0'
+2022-03-30T04:28:33.109096Z     debug   envoy pool      [C46] attaching to next stream
+2022-03-30T04:28:33.109153Z     debug   envoy pool      [C46] creating stream
+2022-03-30T04:28:33.109412Z     debug   envoy filter    [C45] TCP:onUpstreamEvent(), requestedServerName: 
+2022-03-30T04:28:33.110015Z     debug   envoy connection        [C46] remote close
+2022-03-30T04:28:33.110201Z     debug   envoy connection        [C46] closing socket: 0
+2022-03-30T04:28:33.110442Z     debug   envoy pool      [C46] client disconnected, failure reason: 
+2022-03-30T04:28:33.110801Z     debug   envoy pool      invoking idle callbacks - is_draining_for_deletion_=false
+2022-03-30T04:28:33.110828Z     debug   envoy pool      [C46] destroying stream: 0 remaining
+2022-03-30T04:28:33.110833Z     debug   envoy pool      invoking idle callbacks - is_draining_for_deletion_=false
+2022-03-30T04:28:33.110841Z     debug   envoy connection        [C45] closing data_to_write=0 type=0
+2022-03-30T04:28:33.110844Z     debug   envoy connection        [C45] closing socket: 1
+2022-03-30T04:28:33.115576Z     debug   envoy wasm      wasm log stats_outbound tcp_stats_outbound: [extensions/stats/plugin.cc:659]::report() metricKey cache miss istio_tcp_connections_opened_total , stat=12, recurrent=1
+2022-03-30T04:28:33.118735Z     debug   envoy wasm      wasm log stats_outbound tcp_stats_outbound: [extensions/stats/plugin.cc:659]::report() metricKey cache miss istio_tcp_sent_bytes_total , stat=16, recurrent=1
+2022-03-30T04:28:33.121994Z     debug   envoy wasm      wasm log stats_outbound tcp_stats_outbound: [extensions/stats/plugin.cc:659]::report() metricKey cache miss istio_tcp_connections_closed_total , stat=20, recurrent=0
+2022-03-30T04:28:33.125442Z     debug   envoy wasm      wasm log stats_outbound tcp_stats_outbound: [extensions/stats/plugin.cc:659]::report() metricKey cache miss istio_tcp_received_bytes_total , stat=24, recurrent=1
+2022-03-30T04:28:33.125525Z     debug   envoy conn_handler      [C45] adding to cleanup list
+2022-03-30T04:28:33.125717Z     debug   envoy router    [C43][S5034267717411693636] upstream headers complete: end_stream=false
+2022-03-30T04:28:33.126118Z     debug   envoy http      [C43][S5034267717411693636] encoding headers via codec (end_stream=false):
+':status', '503'
+'content-length', '95'
+'content-type', 'text/plain'
+'date', 'Wed, 30 Mar 2022 04:28:32 GMT'
+'server', 'istio-envoy'
+'x-envoy-upstream-service-time', '27'
+'x-envoy-decorator-operation', 'gateway-proxy.gloo-system.svc.cluster.local:80/*'
+
+2022-03-30T04:28:33.126210Z     debug   envoy client    [C44] response complete

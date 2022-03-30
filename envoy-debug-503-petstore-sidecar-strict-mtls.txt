@@ -1,0 +1,203 @@
+2022-03-30T05:12:03.575785Z     debug   envoy filter    original_dst: new connection accepted
+2022-03-30T05:12:03.575928Z     debug   envoy filter    tls inspector: new connection accepted
+2022-03-30T05:12:03.576524Z     debug   envoy filter    http inspector: new connection accepted
+2022-03-30T05:12:03.576576Z     debug   envoy conn_handler      closing connection from 10.92.1.22:50148: no matching filter chain found
+
+
+
+
+2022-03-30T05:11:59.979091Z     debug   envoy conn_handler      [C68] new connection from 10.92.2.1:53838
+2022-03-30T05:11:59.979199Z     debug   envoy http      [C68] new stream
+2022-03-30T05:11:59.979268Z     debug   envoy http      [C68][S13251458866303716496] request headers complete (end_stream=true):
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'connection', 'close'
+
+2022-03-30T05:11:59.979283Z     debug   envoy http      [C68][S13251458866303716496] request end stream
+2022-03-30T05:11:59.979326Z     debug   envoy router    [C68][S13251458866303716496] cluster 'agent' match for URL '/healthz/ready'
+2022-03-30T05:11:59.979378Z     debug   envoy router    [C68][S13251458866303716496] router decoding headers:
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '0fc512ed-497b-4252-8efa-8c82c610b0fb'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+2022-03-30T05:11:59.979397Z     debug   envoy pool      [C3] using existing connection
+2022-03-30T05:11:59.979402Z     debug   envoy pool      [C3] creating stream
+2022-03-30T05:11:59.979414Z     debug   envoy router    [C68][S13251458866303716496] pool ready
+2022-03-30T05:11:59.979834Z     debug   envoy client    [C3] response complete
+2022-03-30T05:11:59.979858Z     debug   envoy router    [C68][S13251458866303716496] upstream headers complete: end_stream=true
+2022-03-30T05:11:59.979896Z     debug   envoy http      [C68][S13251458866303716496] closing connection due to connection close header
+2022-03-30T05:11:59.979914Z     debug   envoy http      [C68][S13251458866303716496] encoding headers via codec (end_stream=true):
+':status', '200'
+'date', 'Wed, 30 Mar 2022 05:11:59 GMT'
+'content-length', '0'
+'x-envoy-upstream-service-time', '0'
+'server', 'envoy'
+'connection', 'close'
+
+2022-03-30T05:11:59.979931Z     debug   envoy connection        [C68] closing data_to_write=143 type=2
+2022-03-30T05:11:59.979944Z     debug   envoy connection        [C68] setting delayed close timer with timeout 1000 ms
+2022-03-30T05:11:59.979952Z     debug   envoy pool      [C3] response complete
+2022-03-30T05:11:59.979955Z     debug   envoy pool      [C3] destroying stream: 0 remaining
+2022-03-30T05:11:59.980003Z     debug   envoy connection        [C68] write flush complete
+2022-03-30T05:11:59.981176Z     debug   envoy connection        [C68] remote early close
+2022-03-30T05:11:59.981187Z     debug   envoy connection        [C68] closing socket: 0
+2022-03-30T05:11:59.981226Z     debug   envoy conn_handler      [C68] adding to cleanup list
+2022-03-30T05:12:01.979060Z     debug   envoy conn_handler      [C69] new connection from 10.92.2.1:53846
+2022-03-30T05:12:01.979534Z     debug   envoy http      [C69] new stream
+2022-03-30T05:12:01.979646Z     debug   envoy http      [C69][S14014184612420000011] request headers complete (end_stream=true):
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'connection', 'close'
+
+2022-03-30T05:12:01.979653Z     debug   envoy http      [C69][S14014184612420000011] request end stream
+2022-03-30T05:12:01.979699Z     debug   envoy router    [C69][S14014184612420000011] cluster 'agent' match for URL '/healthz/ready'
+2022-03-30T05:12:01.979741Z     debug   envoy router    [C69][S14014184612420000011] router decoding headers:
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '8c40e7ba-39db-4893-8c19-0adfda789358'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+2022-03-30T05:12:01.979753Z     debug   envoy pool      [C3] using existing connection
+2022-03-30T05:12:01.979758Z     debug   envoy pool      [C3] creating stream
+2022-03-30T05:12:01.979768Z     debug   envoy router    [C69][S14014184612420000011] pool ready
+2022-03-30T05:12:01.980038Z     debug   envoy client    [C3] response complete
+2022-03-30T05:12:01.980082Z     debug   envoy router    [C69][S14014184612420000011] upstream headers complete: end_stream=true
+2022-03-30T05:12:01.980133Z     debug   envoy http      [C69][S14014184612420000011] closing connection due to connection close header
+2022-03-30T05:12:01.980152Z     debug   envoy http      [C69][S14014184612420000011] encoding headers via codec (end_stream=true):
+':status', '200'
+'date', 'Wed, 30 Mar 2022 05:12:01 GMT'
+'content-length', '0'
+'x-envoy-upstream-service-time', '0'
+'server', 'envoy'
+'connection', 'close'
+
+2022-03-30T05:12:01.980169Z     debug   envoy connection        [C69] closing data_to_write=143 type=2
+2022-03-30T05:12:01.980182Z     debug   envoy connection        [C69] setting delayed close timer with timeout 1000 ms
+2022-03-30T05:12:01.980190Z     debug   envoy pool      [C3] response complete
+2022-03-30T05:12:01.980194Z     debug   envoy pool      [C3] destroying stream: 0 remaining
+2022-03-30T05:12:01.980235Z     debug   envoy connection        [C69] write flush complete
+2022-03-30T05:12:01.981225Z     debug   envoy connection        [C69] remote early close
+2022-03-30T05:12:01.981248Z     debug   envoy connection        [C69] closing socket: 0
+2022-03-30T05:12:01.981290Z     debug   envoy conn_handler      [C69] adding to cleanup list
+2022-03-30T05:12:02.329584Z     debug   envoy filter    original_dst: new connection accepted
+2022-03-30T05:12:02.329650Z     debug   envoy filter    tls inspector: new connection accepted
+2022-03-30T05:12:02.330813Z     debug   envoy filter    http inspector: new connection accepted
+2022-03-30T05:12:02.330853Z     debug   envoy conn_handler      closing connection from 10.92.1.22:50136: no matching filter chain found
+2022-03-30T05:12:02.693972Z     debug   envoy main      flushing stats
+2022-03-30T05:12:03.575785Z     debug   envoy filter    original_dst: new connection accepted
+2022-03-30T05:12:03.575928Z     debug   envoy filter    tls inspector: new connection accepted
+2022-03-30T05:12:03.576524Z     debug   envoy filter    http inspector: new connection accepted
+2022-03-30T05:12:03.576576Z     debug   envoy conn_handler      closing connection from 10.92.1.22:50148: no matching filter chain found
+2022-03-30T05:12:03.979258Z     debug   envoy conn_handler      [C70] new connection from 10.92.2.1:53862
+2022-03-30T05:12:03.979641Z     debug   envoy http      [C70] new stream
+2022-03-30T05:12:03.979798Z     debug   envoy http      [C70][S17299977803209007522] request headers complete (end_stream=true):
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'connection', 'close'
+
+2022-03-30T05:12:03.979828Z     debug   envoy http      [C70][S17299977803209007522] request end stream
+2022-03-30T05:12:03.979916Z     debug   envoy router    [C70][S17299977803209007522] cluster 'agent' match for URL '/healthz/ready'
+2022-03-30T05:12:03.980007Z     debug   envoy router    [C70][S17299977803209007522] router decoding headers:
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'c140d5de-fd01-44bf-b564-042f9c9f8998'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+2022-03-30T05:12:03.980056Z     debug   envoy pool      [C6] using existing connection
+2022-03-30T05:12:03.982233Z     debug   envoy pool      [C6] creating stream
+2022-03-30T05:12:03.982275Z     debug   envoy router    [C70][S17299977803209007522] pool ready
+2022-03-30T05:12:03.982578Z     debug   envoy client    [C6] response complete
+2022-03-30T05:12:03.982819Z     debug   envoy router    [C70][S17299977803209007522] upstream headers complete: end_stream=true
+2022-03-30T05:12:03.982874Z     debug   envoy http      [C70][S17299977803209007522] closing connection due to connection close header
+2022-03-30T05:12:03.982901Z     debug   envoy http      [C70][S17299977803209007522] encoding headers via codec (end_stream=true):
+':status', '200'
+'date', 'Wed, 30 Mar 2022 05:12:03 GMT'
+'content-length', '0'
+'x-envoy-upstream-service-time', '0'
+'server', 'envoy'
+'connection', 'close'
+
+2022-03-30T05:12:03.982923Z     debug   envoy connection        [C70] closing data_to_write=143 type=2
+2022-03-30T05:12:03.982928Z     debug   envoy connection        [C70] setting delayed close timer with timeout 1000 ms
+2022-03-30T05:12:03.982940Z     debug   envoy pool      [C6] response complete
+2022-03-30T05:12:03.982944Z     debug   envoy pool      [C6] destroying stream: 0 remaining
+2022-03-30T05:12:03.982995Z     debug   envoy connection        [C70] write flush complete
+2022-03-30T05:12:03.983268Z     debug   envoy connection        [C70] remote early close
+2022-03-30T05:12:03.983278Z     debug   envoy connection        [C70] closing socket: 0
+2022-03-30T05:12:03.983319Z     debug   envoy conn_handler      [C70] adding to cleanup list
+2022-03-30T05:12:04.858221Z     debug   envoy filter    original_dst: new connection accepted
+2022-03-30T05:12:04.858551Z     debug   envoy filter    tls inspector: new connection accepted
+2022-03-30T05:12:04.858609Z     debug   envoy filter    http inspector: new connection accepted
+2022-03-30T05:12:04.858653Z     debug   envoy conn_handler      closing connection from 10.92.1.22:50156: no matching filter chain found
+2022-03-30T05:12:05.979343Z     debug   envoy conn_handler      [C71] new connection from 10.92.2.1:53870
+2022-03-30T05:12:05.979543Z     debug   envoy http      [C71] new stream
+2022-03-30T05:12:05.979752Z     debug   envoy http      [C71][S4017021614411548356] request headers complete (end_stream=true):
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'connection', 'close'
+
+2022-03-30T05:12:05.979871Z     debug   envoy http      [C71][S4017021614411548356] request end stream
+2022-03-30T05:12:05.979972Z     debug   envoy router    [C71][S4017021614411548356] cluster 'agent' match for URL '/healthz/ready'
+2022-03-30T05:12:05.980965Z     debug   envoy router    [C71][S4017021614411548356] router decoding headers:
+':authority', '10.92.2.21:15021'
+':path', '/healthz/ready'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'kube-probe/1.21'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '60aef910-e522-47ed-b2d7-c8933e66cfe2'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+2022-03-30T05:12:05.981034Z     debug   envoy pool      [C3] using existing connection
+2022-03-30T05:12:05.981065Z     debug   envoy pool      [C3] creating stream
+2022-03-30T05:12:05.981118Z     debug   envoy router    [C71][S4017021614411548356] pool ready
+2022-03-30T05:12:05.981437Z     debug   envoy client    [C3] response complete
+2022-03-30T05:12:05.981499Z     debug   envoy router    [C71][S4017021614411548356] upstream headers complete: end_stream=true
+2022-03-30T05:12:05.981645Z     debug   envoy http      [C71][S4017021614411548356] closing connection due to connection close header
+2022-03-30T05:12:05.981686Z     debug   envoy http      [C71][S4017021614411548356] encoding headers via codec (end_stream=true):
+':status', '200'
+'date', 'Wed, 30 Mar 2022 05:12:05 GMT'
+'content-length', '0'
+'x-envoy-upstream-service-time', '0'
+'server', 'envoy'
+'connection', 'close'
+
+2022-03-30T05:12:05.981768Z     debug   envoy connection        [C71] closing data_to_write=143 type=2
+2022-03-30T05:12:05.981845Z     debug   envoy connection        [C71] setting delayed close timer with timeout 1000 ms
+2022-03-30T05:12:05.981885Z     debug   envoy pool      [C3] response complete
+2022-03-30T05:12:05.981936Z     debug   envoy pool      [C3] destroying stream: 0 remaining
+2022-03-30T05:12:05.982050Z     debug   envoy connection        [C71] write flush complete
+2022-03-30T05:12:05.982877Z     debug   envoy connection        [C71] remote early close
+2022-03-30T05:12:05.982896Z     debug   envoy connection        [C71] closing socket: 0
+2022-03-30T05:12:05.983011Z     debug   envoy conn_handler      [C71] adding to cleanup list
+^C
+➜  demo-gloo-edge-istio git:(main) ✗ 

@@ -1,0 +1,73 @@
+[2022-03-30 04:39:56.964][7][debug][main] [external/envoy/source/server/server.cc:229] flushing stats
+[2022-03-30 04:39:57.496][7][debug][dns] [external/envoy/source/common/network/dns_impl.cc:270] dns resolution for gloo.gloo-system.svc.cluster.local started
+[2022-03-30 04:39:57.497][7][debug][dns] [external/envoy/source/common/network/dns_impl.cc:270] dns resolution for gloo.gloo-system.svc.cluster.local started
+[2022-03-30 04:39:57.497][7][debug][dns] [external/envoy/source/common/network/dns_impl.cc:270] dns resolution for gloo.gloo-system.svc.cluster.local started
+[2022-03-30 04:39:57.522][7][debug][dns] [external/envoy/source/common/network/dns_impl.cc:188] dns resolution for gloo.gloo-system.svc.cluster.local completed with status 0
+[2022-03-30 04:39:57.522][7][debug][upstream] [external/envoy/source/common/upstream/upstream_impl.cc:256] transport socket match, socket default selected for host with address 10.8.61.36:9976
+[2022-03-30 04:39:57.522][7][debug][upstream] [external/envoy/source/common/upstream/strict_dns_cluster.cc:177] DNS refresh rate reset for gloo.gloo-system.svc.cluster.local, refresh rate 30000 ms
+[2022-03-30 04:39:57.522][7][debug][dns] [external/envoy/source/common/network/dns_impl.cc:188] dns resolution for gloo.gloo-system.svc.cluster.local completed with status 0
+[2022-03-30 04:39:57.522][7][debug][upstream] [external/envoy/source/common/upstream/upstream_impl.cc:256] transport socket match, socket default selected for host with address 10.8.61.36:9977
+[2022-03-30 04:39:57.523][7][debug][upstream] [external/envoy/source/common/upstream/strict_dns_cluster.cc:177] DNS refresh rate reset for gloo.gloo-system.svc.cluster.local, refresh rate 30000 ms
+[2022-03-30 04:39:57.523][7][debug][dns] [external/envoy/source/common/network/dns_impl.cc:188] dns resolution for gloo.gloo-system.svc.cluster.local completed with status 0
+[2022-03-30 04:39:57.523][7][debug][upstream] [external/envoy/source/common/upstream/upstream_impl.cc:256] transport socket match, socket default selected for host with address 10.8.61.36:9979
+[2022-03-30 04:39:57.523][7][debug][upstream] [external/envoy/source/common/upstream/strict_dns_cluster.cc:177] DNS refresh rate reset for gloo.gloo-system.svc.cluster.local, refresh rate 30000 ms
+[2022-03-30 04:39:57.556][17][debug][conn_handler] [external/envoy/source/server/active_tcp_listener.cc:140] [C9] new connection from 127.0.0.6:46041
+[2022-03-30 04:39:57.558][17][debug][http] [external/envoy/source/common/http/conn_manager_impl.cc:274] [C9] new stream
+[2022-03-30 04:39:57.558][17][debug][http] [external/envoy/source/common/http/conn_manager_impl.cc:867] [C9][S16881440595056023802] request headers complete (end_stream=true):
+':authority', '35.193.220.12'
+':path', '/pets'
+':method', 'GET'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'efb9382d-c0b9-4574-b63e-debe8c51532f'
+'x-b3-traceid', '4a1c39be384dcccc2852be15b071bb17'
+'x-b3-spanid', '2852be15b071bb17'
+'x-b3-sampled', '0'
+
+[2022-03-30 04:39:57.558][17][debug][http] [external/envoy/source/common/http/filter_manager.cc:841] [C9][S16881440595056023802] request end stream
+[2022-03-30 04:39:57.559][17][debug][router] [external/envoy/source/common/router/router.cc:457] [C9][S16881440595056023802] cluster 'petstore-petstore-8080_gloo-system' match for URL '/pets'
+[2022-03-30 04:39:57.559][17][debug][router] [external/envoy/source/common/router/router.cc:673] [C9][S16881440595056023802] router decoding headers:
+':authority', '35.193.220.12'
+':path', '/api/pets'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'efb9382d-c0b9-4574-b63e-debe8c51532f'
+'x-b3-traceid', '4a1c39be384dcccc2852be15b071bb17'
+'x-b3-spanid', '2852be15b071bb17'
+'x-b3-sampled', '0'
+'x-envoy-expected-rq-timeout-ms', '15000'
+'x-envoy-original-path', '/pets'
+
+[2022-03-30 04:39:57.559][17][debug][pool] [external/envoy/source/common/http/conn_pool_base.cc:74] queueing stream due to no available connections
+[2022-03-30 04:39:57.559][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:256] trying to create new connection
+[2022-03-30 04:39:57.559][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:144] creating a new connection
+[2022-03-30 04:39:57.559][17][debug][client] [external/envoy/source/common/http/codec_client.cc:60] [C10] connecting
+[2022-03-30 04:39:57.559][17][debug][connection] [external/envoy/source/common/network/connection_impl.cc:890] [C10] connecting to 10.92.2.20:8080
+[2022-03-30 04:39:57.559][17][debug][connection] [external/envoy/source/common/network/connection_impl.cc:909] [C10] connection in progress
+[2022-03-30 04:39:57.559][17][debug][connection] [external/envoy/source/common/network/connection_impl.cc:672] [C10] connected
+[2022-03-30 04:39:57.559][17][debug][client] [external/envoy/source/common/http/codec_client.cc:88] [C10] connected
+[2022-03-30 04:39:57.559][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:294] [C10] attaching to next stream
+[2022-03-30 04:39:57.559][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:177] [C10] creating stream
+[2022-03-30 04:39:57.559][17][debug][router] [external/envoy/source/common/router/upstream_request.cc:416] [C9][S16881440595056023802] pool ready
+[2022-03-30 04:39:57.566][17][debug][connection] [external/envoy/source/common/network/connection_impl.cc:640] [C10] remote close
+[2022-03-30 04:39:57.566][17][debug][connection] [external/envoy/source/common/network/connection_impl.cc:249] [C10] closing socket: 0
+[2022-03-30 04:39:57.566][17][debug][client] [external/envoy/source/common/http/codec_client.cc:106] [C10] disconnect. resetting 1 pending requests
+[2022-03-30 04:39:57.566][17][debug][client] [external/envoy/source/common/http/codec_client.cc:142] [C10] request reset
+[2022-03-30 04:39:57.566][17][debug][router] [external/envoy/source/common/router/router.cc:1130] [C9][S16881440595056023802] upstream reset: reset reason: connection termination, transport failure reason: 
+[2022-03-30 04:39:57.566][17][debug][http] [external/envoy/source/common/http/filter_manager.cc:953] [C9][S16881440595056023802] Sending local reply with details upstream_reset_before_response_started{connection termination}
+[2022-03-30 04:39:57.566][17][debug][http] [external/envoy/source/common/http/conn_manager_impl.cc:1467] [C9][S16881440595056023802] encoding headers via codec (end_stream=false):
+':status', '503'
+'content-length', '95'
+'content-type', 'text/plain'
+'date', 'Wed, 30 Mar 2022 04:39:57 GMT'
+'server', 'envoy'
+
+[2022-03-30 04:39:57.566][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:429] [C10] client disconnected, failure reason: 
+[2022-03-30 04:39:57.566][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:396] invoking idle callbacks - is_draining_for_deletion_=false
+[2022-03-30 04:39:57.567][17][debug][pool] [external/envoy/source/common/conn_pool/conn_pool_base.cc:205] [C10] destroying stream: 0 remaining
+[2022-03-30 04:40:01.964][7][debug][main] [external/envoy/source/server/server.cc:229] flushing stats
+^C

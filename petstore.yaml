@@ -1,0 +1,44 @@
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: petstore
+  labels:
+    account: petstore
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: petstore
+  name: petstore 
+spec:
+  selector:
+    matchLabels:
+      app: petstore
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: petstore
+    spec:
+      serviceAccountName: petstore
+      containers:
+      - image: soloio/petstore-example:latest
+        name: petstore-rest-service
+        ports:
+        - containerPort: 8080
+          name: http-web
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: petstore
+  labels:
+    service: petstore
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: petstore
