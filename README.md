@@ -93,3 +93,7 @@ glooctl proxy logs -f
 
 
 https://discuss.istio.io/t/mtls-not-working-when-service-port-and-targetport-are-different/10681
+
+https://docs.aws.amazon.com/app-mesh/latest/userguide/troubleshooting-connectivity.html
+
+No matching filter chain found – This is most likely caused when a request is sent to a virtual service on an invalid port. Make sure that the requests from the application are using the same port specified on the virtual router.

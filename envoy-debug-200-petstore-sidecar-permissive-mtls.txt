@@ -1,0 +1,48 @@
+2022-03-30T06:08:26.148797Z     debug   envoy conn_handler      [C1765] new connection from 10.92.1.22:60912
+2022-03-30T06:08:26.148921Z     debug   envoy http      [C1765] new stream
+2022-03-30T06:08:26.149127Z     debug   envoy http      [C1765][S4587158901235610008] request headers complete (end_stream=true):
+':authority', '35.193.220.12'
+':path', '/api/pets'
+':method', 'GET'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'b9f26249-4a4b-4f57-958d-c53c7593c1dc'
+'x-b3-traceid', '7c27fd3135984ec90783c1281771484a'
+'x-b3-spanid', '0783c1281771484a'
+'x-b3-sampled', '0'
+'x-envoy-expected-rq-timeout-ms', '15000'
+'x-envoy-original-path', '/pets'
+
+2022-03-30T06:08:26.149301Z     debug   envoy http      [C1765][S4587158901235610008] request end stream
+2022-03-30T06:08:26.149730Z     debug   envoy router    [C1765][S4587158901235610008] cluster 'inbound|8080||' match for URL '/api/pets'
+2022-03-30T06:08:26.149890Z     debug   envoy upstream  Using existing host 10.92.2.21:8080.
+2022-03-30T06:08:26.150057Z     debug   envoy router    [C1765][S4587158901235610008] router decoding headers:
+':authority', '35.193.220.12'
+':path', '/api/pets'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.77.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'b9f26249-4a4b-4f57-958d-c53c7593c1dc'
+'x-envoy-original-path', '/pets'
+'x-b3-traceid', '7c27fd3135984ec90783c1281771484a'
+'x-b3-spanid', '13c62389f4d97aec'
+'x-b3-parentspanid', '0783c1281771484a'
+'x-b3-sampled', '0'
+
+2022-03-30T06:08:26.150225Z     debug   envoy pool      [C1751] using existing connection
+2022-03-30T06:08:26.150311Z     debug   envoy pool      [C1751] creating stream
+2022-03-30T06:08:26.150345Z     debug   envoy router    [C1765][S4587158901235610008] pool ready
+2022-03-30T06:08:26.152695Z     debug   envoy router    [C1765][S4587158901235610008] upstream headers complete: end_stream=false
+2022-03-30T06:08:26.152841Z     debug   envoy http      [C1765][S4587158901235610008] encoding headers via codec (end_stream=false):
+':status', '200'
+'content-type', 'text/html'
+'date', 'Wed, 30 Mar 2022 06:08:26 GMT'
+'content-length', '86'
+'x-envoy-upstream-service-time', '2'
+'server', 'istio-envoy'
+'x-envoy-decorator-operation', 'petstore.petstore.svc.cluster.local:8080/*'
+
+2022-03-30T06:08:26.152983Z     debug   envoy client    [C1751] response complete
