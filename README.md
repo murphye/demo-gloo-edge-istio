@@ -10,7 +10,7 @@ glooctl install gateway
 ## Install Istio (Version 1.13.2)
 
 ```
-istioctl install --set profile=default --set values.global.proxy.logLevel=debug
+istioctl install --set profile=default
 ```
 
 ## Install PetStore and Route Through Gloo Edge
@@ -84,3 +84,12 @@ k logs -n gloo-system gateway-proxy-58c7bd476-7d9jh -c istio-proxy -f
 ```
 glooctl proxy logs -f
 ```
+
+
+
+
+
+
+
+
+https://discuss.istio.io/t/mtls-not-working-when-service-port-and-targetport-are-different/10681
