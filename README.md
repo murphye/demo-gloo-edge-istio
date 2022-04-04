@@ -19,7 +19,7 @@ istioctl install --set profile=default
 k create ns petstore
 k apply -n petstore -f ./petstore.yaml
 k get upstream -n gloo-system
-k apply -f ./petstore-gloo-vs-static.yaml
+k apply -f ./petstore-gloo-vs.yaml
 curl -i $(glooctl proxy url)/pets
 ```
 
@@ -54,6 +54,33 @@ spec:
   mtls:
     mode: STRICT
 EOF
+```
+
+## Observe 503 Service Unavailable
+
+This is due to direct to pod routing of Gloo Edge.
+
+```
+curl -i $(glooctl proxy url)/pets
+virtualservice.gateway.solo.io/default configured
+upstream.gloo.solo.io/petstore-static-upstream unchanged
+HTTP/1.1 503 Service Unavailable
+content-length: 95
+content-type: text/plain
+date: Mon, 04 Apr 2022 04:17:28 GMT
+server: envoy
+```
+
+## Apply Static Upstream to Service
+
+```
+k apply -f ./petstore-gloo-vs-static.yaml
+```
+
+Service will be available again, no more 503.
+
+```
+curl -i $(glooctl proxy url)/pets
 ```
 
 ### Gloo Gateway Istio Sidecar Proxy Logs
