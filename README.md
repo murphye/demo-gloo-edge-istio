@@ -19,13 +19,21 @@ istioctl install --set profile=default
 k create ns petstore
 k apply -n petstore -f ./petstore.yaml
 k get upstream -n gloo-system
-k apply -f ./petstore-gloo-vs.yaml
+k apply -f ./petstore-gloo-vs-static.yaml
 curl -i $(glooctl proxy url)/pets
 ```
 
 ## Add Istio Sidecar to Gloo Edge Proxy
 
+```
 kubectl patch deployment gateway-proxy -n gloo-system --patch '{"spec": {"template": {"metadata": {"labels": {"sidecar.istio.io/inject": "true"}}}}}'
+```
+
+## Add Exclude Inbound Ports
+
+```
+kubectl patch deployment gateway-proxy -n gloo-system --patch '{"spec": {"template": {"metadata": {"annotations": {"traffic.sidecar.istio.io/excludeInboundPorts": "8080,8443"}}}}}'
+```
 
 ## Auto-inject Sidecars
 
@@ -48,20 +56,6 @@ spec:
 EOF
 ```
 
-
-```
-cat <<EOF | kubectl apply -n petstore -f -
-apiVersion: networking.istio.io/v1beta1
-kind: DestinationRule
-metadata:
-  name: petstore-mtls
-spec:
-  host: petstore.petstore.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
-EOF
-```
 
 ## (Optional) Istio Ingress Gateway
 
