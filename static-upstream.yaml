@@ -1,0 +1,10 @@
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  name: petstore-static-upstream
+  namespace: gloo-system
+spec:
+  static:
+    hosts:
+      - addr: petstore.petstore
+        port: 8080

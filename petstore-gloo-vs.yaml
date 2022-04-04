@@ -19,7 +19,7 @@ spec:
         routeAction:
           single:
             upstream:
-              name: petstore-petstore-8080
+              name: petstore-static-upstream
               namespace: gloo-system
             # kube:
             #   ref:

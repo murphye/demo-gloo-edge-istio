@@ -97,3 +97,10 @@ https://discuss.istio.io/t/mtls-not-working-when-service-port-and-targetport-are
 https://docs.aws.amazon.com/app-mesh/latest/userguide/troubleshooting-connectivity.html
 
 No matching filter chain found – This is most likely caused when a request is sent to a virtual service on an invalid port. Make sure that the requests from the application are using the same port specified on the virtual router.
+
+
+
+
+
+k edit -n gloo-system deployments.apps gateway-proxy
+traffic.sidecar.istio.io/excludeInboundPorts: 8080,8443
